@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "check": "svelte-check",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest --run"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "svelte-check": "^3.8.0",
+    "typescript": "^5.4.5",
+    "typescript-svelte-plugin": "^0.3.38",
+    "vite": "^5.3.1",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "svelte": "5.0.0-next.155"
+  },
+  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631"
+}
