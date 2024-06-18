@@ -1,36 +1,20 @@
-import type { Component, ComponentProps, SvelteComponent } from 'svelte';
+import type {
+  Component,
+  ComponentProps,
+} from "svelte";
 
-import Story from './Story.svelte';
+import Story from "./Story.svelte";
 
-export type PossibleComponentType = Component | SvelteComponent;
-//.                                             ^ Without this type,
-//.                                               we wouldn't be able to provide 'Button' component as generic type paramter.
-//.                                               file://./types.test.ts
-
-export interface Meta<
-  TComponent extends PossibleComponentType = PossibleComponentType
-> {
+export interface Meta<TComponent extends Component = Component> {
   component: TComponent;
-  args?: Partial<ComponentProps<TComponent>>;
+  args?: Partial<ComponentProps<TComponent>>
 }
 
-export function defineMeta<TMeta extends Meta = Meta>(meta: TMeta) {
+export function defineMeta<
+  TComponent extends Component,
+>(meta: Meta<TComponent>) {
   return {
     meta,
-    Story: Story as typeof Story<TMeta>,
-  };
-}
-
-export interface HackyMeta<
-  TComponent extends PossibleComponentType = PossibleComponentType
-> {
-  component: TComponent | PossibleComponentType;
-  args?: Partial<ComponentProps<TComponent>>;
-}
-
-export function hackyDefineMeta<TMeta extends HackyMeta = HackyMeta>(meta: TMeta) {
-  return {
-    meta,
-    Story: Story as typeof Story<TMeta>,
+    Story: Story as typeof Story<TComponent>,
   };
 }

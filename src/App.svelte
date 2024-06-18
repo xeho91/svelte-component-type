@@ -20,12 +20,9 @@
     Click me
 {/snippet}
 
-<!--                      \/ Typings doesn't work here either -->
 <Story component={Button} args={{ size: "large", children: defaultTemplate }} />
 
-<!--                      \/ Typings doesn't work here either -->
 <Story component={Button} args={{ size: "medium", children: defaultTemplate }} />
   
-<!--                      \/ Typings doesn't work here either -->
 <Story component={Button} args={{ size: "small", children: defaultTemplate }} />
   
